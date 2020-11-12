@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/11 20:50:10 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/11/12 20:11:04 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,9 @@ typedef struct		s_scene
 }					t_scene;
 
 
-//FUNCIONES GET_NEXT_LINE
+/*
+**  FUNCIONES GET_NEXT_LINE
+*/
 size_t				ft_strlen(char *str);
 char				*ft_strdup(char *s1);
 char				*ft_substr(char *s, unsigned int start, size_t len);
@@ -132,7 +134,7 @@ int					get_next_line(int fd, char **line);
 int					main(int argc, char *argv[]);
 
 //FUNCIONES RECOGIDA DE VALORES
-void				ft_get_the_values(t_scene *scene, char **line);
+void				ft_get_the_values(t_scene **scene, char **line);
 int					ft_atoi(const char *str);
 
 
