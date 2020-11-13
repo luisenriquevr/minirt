@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_the_values.c                                :+:      :+:    :+:   */
+/*   ft_get_alight.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/26 11:47:16 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/13 19:28:49 by lvarela          ###   ########.fr       */
+/*   Created: 2020/11/13 19:03:58 by lvarela           #+#    #+#             */
+/*   Updated: 2020/11/13 19:26:22 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt.h"
 
-
-
-
-void				ft_get_the_values(t_scene **scene, char **line)
+/*void				ft_get_alight(t_scene **scene, char **line)
 {
-	if ((*line)[0] == 'R')
-		ft_get_resolution(scene, line);
-	/*if ((*line)[0] == 'A')
-		ft_get_alight(scene, line);*/
+	t_alight		*alight;
+	int				i;
+	
+	alight = (t_alight *) malloc(sizeof(t_alight) * 1);
+	i = 1;
+	while ((*line)[i] == ' ')
+		i++;
+	alight->ratio = ft_atof(&(*line)[i]);
+	while (((*line)[i] >= '0' && (*line)[i] <= '9') || ((*line)[i] == '.'))
+		i++;
+	while ((*line)[i] == ' ')
+		i++;
+	alight = ft_get_rgb(&(*line)[i]);
 	return ;
-}
+}*/
