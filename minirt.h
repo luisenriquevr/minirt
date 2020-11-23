@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/13 19:26:46 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/11/23 10:48:04 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,8 +136,10 @@ int					main(int argc, char *argv[]);
 //FUNCIONES RECOGIDA DE VALORES
 void				ft_get_the_values(t_scene **scene, char **line);
 void				ft_get_resolution(t_scene **scene, char **line);
-//void				ft_get_alight(t_scene **scene, char **line);
+void				ft_get_alight(t_scene **scene, char **line);
 int					ft_atoi(const char *str);
 
+// FUNCION PARA INICIAR LA ESTRUCTURA
+void				ft_scene_init(t_scene **scene);
 
 #endif

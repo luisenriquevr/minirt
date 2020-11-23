@@ -6,13 +6,13 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 19:03:58 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/13 19:26:22 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/11/23 10:49:03 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt.h"
 
-/*void				ft_get_alight(t_scene **scene, char **line)
+void				ft_get_alight(t_scene **scene, char **line)
 {
 	t_alight		*alight;
 	int				i;
@@ -28,4 +28,4 @@
 		i++;
 	alight = ft_get_rgb(&(*line)[i]);
 	return ;
-}*/
+}
