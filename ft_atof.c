@@ -6,13 +6,14 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 10:55:37 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/24 15:49:45 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/11/25 10:29:13 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt.h"
+#include <math.h>
 
-float			ft_dot_number(char *str, int sign, int num)
+static float	ft_dot_number(const char *str, int sign, int num)
 {
 	int			i;
 	float		num2;

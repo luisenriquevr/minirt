@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/23 10:44:57 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/11/25 11:11:36 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,11 @@ int				main(int argc, char *argv[])
 		return(printf("Archivo vacio o incorrecto\n"));
 	scene = (t_scene *) malloc(sizeof(t_scene));
 	ft_scene_init(&scene);
-	//ret = 1;
-	//while (ret > 0)
-	//{
+	ret = 1;
+	while (ret > 0)
+	{
 		ret = get_next_line(fd, &line);
 		ft_get_the_values(&scene, &line);
-		printf("%d\n", scene->resolution->x);
-		printf("%d\n", scene->resolution->y);
-	//}
+	}
 	return(ret);
 }

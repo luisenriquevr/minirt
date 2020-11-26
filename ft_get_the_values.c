@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 11:47:16 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/23 10:50:35 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/11/25 10:51:44 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 void				ft_get_the_values(t_scene **scene, char **line)
 {
-	if ((*line)[0] == 'R')
-		ft_get_resolution(scene, line);
-	if ((*line)[0] == 'A')
-		ft_get_alight(scene, line);
+	int				i;
+
+	i = 0;
+	while (*line[i++])
+	{
+		if ((*line)[i] == 'R')
+			ft_get_resolution(scene, line);
+		if ((*line)[i] == 'A')
+			ft_get_alight(scene, line);
+	}
 	return ;
 }

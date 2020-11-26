@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/24 15:30:25 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/11/25 10:29:30 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <math.h>
+# include <errno.h>
+# include <fenv.h>
 
 
 //ESTRUCTURAS

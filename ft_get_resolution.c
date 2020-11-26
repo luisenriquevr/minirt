@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 19:02:16 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/13 19:02:49 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/11/25 10:53:05 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void				ft_get_resolution(t_scene **scene, char **line)
 	int				i;
 
 	resolution = (t_resolution *)malloc(sizeof(t_resolution) * 1);
-	i = 1;
+	i = 0;
 	while ((*line)[i] == ' ')
 		i++;
 	resolution->x = ft_atoi(&(*line)[i]);
