@@ -18,7 +18,7 @@ OBJS = $(SRCS:.c=.o)
 $(NAME) : $(OBJS)
 		@cd libft && $(MAKE)
 		@cp libft/libft.a libft.a
-		@gcc  $(OBJS) libft.a main.c -o $(NAME)
+		@gcc  $(OBJS) libft.a main.c -o $(NAME) -lm
 
 f:	
 	gcc *.c libft/*.c
