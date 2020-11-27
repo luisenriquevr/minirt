@@ -6,7 +6,7 @@
 /*   By: jalcayne <jalcayne@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 19:03:58 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/27 11:35:18 by jalcayne         ###   ########.fr       */
+/*   Updated: 2020/11/27 11:52:07 by jalcayne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ void				ft_get_alight(t_scene **scene, char **line)
 	while ((*line)[i] && ((*line)[i] < '0' || (*line)[i] > '9'))
 		i++;
 	alight->color = ft_get_rgb(&(*line)[i]);
-	printf("%d\n", alight->color.r);
-	printf("%d\n", alight->color.g);
-	printf("%d\n", alight->color.b);
+	(*scene)->alight = alight;
 	return ;
 }
