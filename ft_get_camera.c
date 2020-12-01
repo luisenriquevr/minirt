@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_alight.c                                    :+:      :+:    :+:   */
+/*   ft_get_camera.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/13 19:03:58 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/01 19:14:48 by lvarela          ###   ########.fr       */
+/*   Created: 2020/12/01 19:08:28 by lvarela           #+#    #+#             */
+/*   Updated: 2020/12/01 19:51:10 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minirt.h"
+# include "minirt.h"
 
-void				ft_get_alight(t_scene **scene, char **line)
+void			ft_get_camera(t_scene **scene, char **line)
 {
-	t_alight		*alight;
-	int				i;
-	
-	alight = (t_alight *) malloc(sizeof(t_alight) * 1);
+	t_camera	*camera;
+	int			i;
+
+	camera = (t_camera *) malloc(sizeof(t_camera) * 1);
 	i = 1;
 	while ((*line)[i] == ' ')
 		i++;
-	alight->ratio = ft_atof(&(*line)[i]);
-	while ((*line)[i] && (*line)[i] != ' ')
-		i++;
-	while ((*line)[i] && ((*line)[i] < '0' || (*line)[i] > '9'))
-		i++;
-	alight->color = ft_get_rgb(&(*line)[i]);
-	(*scene)->alight = alight;
+	camera->position = ft_get_vector(&(*line)[i]);
 	return ;
 }

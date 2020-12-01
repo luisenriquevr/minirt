@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/01 18:34:59 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/01 19:59:33 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,17 +133,25 @@ char				*ft_strchr(char *s, int c);
 char				*ft_strjoin(char *s1, char *s2);
 int					get_next_line(int fd, char **line);
 
-//FUNCION MADRE
+/*
+**FUNCION MADRE
+*/
 int					main(int argc, char *argv[]);
 
-//FUNCIONES RECOGIDA DE VALORES
+/*
+** FUNCIONES RECOGIDA DE VALORES
+*/
 void				ft_get_the_values(t_scene **scene, char **line);
 void				ft_get_alight(t_scene **scene, char **line);
 void				ft_get_resolution(t_scene **scene, char **line);
 t_color         	ft_get_rgb(char *line);
 float				ft_atof(const char *str);
+t_vector			ft_get_vector(char **line);
+void				ft_get_camera(t_scene **scene, char **line);
 
-// FUNCION PARA INICIAR LA ESTRUCTURA
+/*
+** FUNCION PARA INICIAR LA ESTRUCTURA
+*/
 void				ft_scene_init(t_scene **scene);
 
 #endif
