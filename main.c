@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/27 10:25:43 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/01 18:34:34 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,8 @@ int				main(int argc, char *argv[])
 		ret = get_next_line(fd, &line);
 		ft_get_the_values(&scene, &line);
 	}
+	printf("%d\n", (*scene).alight->color.r);
+	printf("%d\n", (*scene).alight->color.g);
+	printf("%d\n", (*scene).alight->color.b);
 	return(ret);
 }
