@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 19:03:58 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/01 19:00:34 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/01 19:01:26 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void				ft_get_alight(t_scene **scene, char **line)
 		i++;
 	//printf("%s\n", &(*line)[i]);
 	alight->ratio = ft_atof(&(*line)[i]);
-	printf("%f\n", alight->ratio);
-
 	while ((*line)[i] && (*line)[i] != ' ')
 		i++;
 	while ((*line)[i] && ((*line)[i] < '0' || (*line)[i] > '9'))

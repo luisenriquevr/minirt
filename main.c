@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/01 18:49:24 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/01 19:01:46 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int				main(int argc, char *argv[])
 	}
 	printf("%d\n", (*scene).resolution->x);
 	printf("%d\n", (*scene).resolution->y);
+	printf("%f\n", (*scene).alight->ratio);
 	printf("%d\n", (*scene).alight->color.r);
 	printf("%d\n", (*scene).alight->color.g);
 	printf("%d\n", (*scene).alight->color.b);
