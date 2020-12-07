@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/01 19:59:33 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/07 17:54:31 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,7 +146,7 @@ void				ft_get_alight(t_scene **scene, char **line);
 void				ft_get_resolution(t_scene **scene, char **line);
 t_color         	ft_get_rgb(char *line);
 float				ft_atof(const char *str);
-t_vector			ft_get_vector(char **line);
+t_vector			ft_get_vector(char *line);
 void				ft_get_camera(t_scene **scene, char **line);
 
 /*

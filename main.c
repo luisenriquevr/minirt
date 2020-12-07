@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/01 19:01:46 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/07 17:59:29 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,8 @@ int				main(int argc, char *argv[])
 	printf("%d\n", (*scene).alight->color.r);
 	printf("%d\n", (*scene).alight->color.g);
 	printf("%d\n", (*scene).alight->color.b);
+	printf("%f\n", (*scene).camera->position.x);
+	printf("%f\n", (*scene).camera->position.y);
+	printf("%f\n", (*scene).camera->position.z);
 	return(ret);
 }
