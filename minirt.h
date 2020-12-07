@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/07 17:54:31 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/07 18:33:03 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@
 # include <errno.h>
 # include <fenv.h>
 
-
-//ESTRUCTURAS
+/*
+** ESTRUCTURAS
+*/
 typedef struct		s_vector
 {
 	float			x;
@@ -134,7 +135,7 @@ char				*ft_strjoin(char *s1, char *s2);
 int					get_next_line(int fd, char **line);
 
 /*
-**FUNCION MADRE
+** FUNCION MADRE
 */
 int					main(int argc, char *argv[]);
 
@@ -148,6 +149,7 @@ t_color         	ft_get_rgb(char *line);
 float				ft_atof(const char *str);
 t_vector			ft_get_vector(char *line);
 void				ft_get_camera(t_scene **scene, char **line);
+void				ft_get_light(t_scene **scene, char **line);
 
 /*
 ** FUNCION PARA INICIAR LA ESTRUCTURA
