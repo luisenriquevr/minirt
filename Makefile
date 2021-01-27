@@ -10,7 +10,10 @@ SRCS =	get_next_line/get_next_line_utils.c \
 		ft_get_resolution.c \
 		ft_get_rgb.c \
 		ft_get_the_values.c \
-		ft_scene_init.c
+		ft_scene_init.c \
+		ft_get_vector.c \
+		ft_get_camera.c \
+		ft_get_light.c
 
 OBJS = $(SRCS:.c=.o)
 

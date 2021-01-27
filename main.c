@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/27 11:55:27 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/18 14:30:45 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,30 @@ int				main(int argc, char *argv[])
 		ret = get_next_line(fd, &line);
 		ft_get_the_values(&scene, &line);
 	}
+	printf("%s\n", "Esto es resolution");
+	printf("%d\n", (*scene).resolution->x);
+	printf("%d\n", (*scene).resolution->y);
+	printf("%s\n", "Esto es alight");
+	printf("%f\n", (*scene).alight->ratio);
+	printf("%d\n", (*scene).alight->color.r);
+	printf("%d\n", (*scene).alight->color.g);
+	printf("%d\n", (*scene).alight->color.b);
+	printf("%s\n", "Esto es camera");
+	printf("%f\n", (*scene).camera->position.x);
+	printf("%f\n", (*scene).camera->position.y);
+	printf("%f\n", (*scene).camera->position.z);
+	printf("%f\n", (*scene).camera->orientation.x);
+	printf("%f\n", (*scene).camera->orientation.y);
+	printf("%f\n", (*scene).camera->orientation.z);
+	printf("%d\n", (*scene).camera->fov);
+	printf("%s\n", "Esto es light");
+	printf("%f\n", (*scene).light->position.x);
+	printf("%f\n", (*scene).light->position.y);
+	printf("%f\n", (*scene).light->position.z);
+	printf("%f\n", (*scene).light->ratio);
+	printf("%d\n", (*scene).light->color.r);
+	printf("%d\n", (*scene).light->color.g);
+	printf("%d\n", (*scene).light->color.b);
+
 	return(ret);
 }

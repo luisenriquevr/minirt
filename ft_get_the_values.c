@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 11:47:16 by lvarela           #+#    #+#             */
-/*   Updated: 2020/11/27 10:57:33 by lvarela          ###   ########.fr       */
+/*   Updated: 2020/12/07 18:10:21 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 
 void				ft_get_the_values(t_scene **scene, char **line)
 {
-	int				i;
-	
-	i = 0;
-	write(1, "vamos values", 12);
-
-	while (*line[i++])
-	{
-		if ((*line)[i] == 'R')
-			ft_get_resolution(scene, line);
-		else if ((*line)[i] == 'A')
-			ft_get_alight(scene, line);
-	}
+	if ((*line)[0] == 'R')
+		ft_get_resolution(scene, line);
+	else if ((*line)[0] == 'A')
+		ft_get_alight(scene, line);
+	else if ((*line)[0] == 'c')
+		ft_get_camera(scene, line);
+	else if ((*line)[0] == 'l')
+		ft_get_light(scene, line);
 	return ;
 }

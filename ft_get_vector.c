@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_alight.c                                    :+:      :+:    :+:   */
+/*   ft_get_vector.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/13 19:03:58 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/18 14:30:20 by lvarela          ###   ########.fr       */
+/*   Created: 2020/12/01 19:22:31 by lvarela           #+#    #+#             */
+/*   Updated: 2020/12/07 18:47:34 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt.h"
 
-void				ft_get_alight(t_scene **scene, char **line)
+t_vector		ft_get_vector(char *line)
 {
-	t_alight		*alight;
-	int				i;
-	
-	alight = (t_alight *) malloc(sizeof(t_alight) * 1);
-	i = 1;
-	while ((*line)[i] == ' ')
+	t_vector	vector;
+	int			i;
+
+	i = 0;
+	vector.x = ft_atof(&(line)[i]);
+	while (line[i] != ',' && line[i])
 		i++;
-	alight->ratio = ft_atof(&(*line)[i]);
-	while ((*line)[i] && (*line)[i] != ' ')
+	i++;
+	vector.y = ft_atof(&line[i]);
+	while (line[i] != ',' && line[i])
 		i++;
-	while ((*line)[i] && ((*line)[i] < '0' || (*line)[i] > '9'))
-		i++;
-	alight->color = ft_get_rgb(&(*line)[i]);
-	(*scene)->alight = alight;
-	return ;
+	i++;
+	vector.z = ft_atof(&line[i]);
+	return(vector);
 }
