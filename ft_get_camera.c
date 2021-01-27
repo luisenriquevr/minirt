@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 19:08:28 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/07 18:24:18 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/01/27 11:54:27 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void			ft_get_camera(t_scene **scene, char **line)
 	i = 1;
 	while ((*line)[i] == ' ' && (*line)[i])
 		i++;
+	printf("%s\n", &(*line)[i]);
 	camera->position = ft_get_vector(&(*line)[i]);
 	while ((*line)[i] != ' ' && (*line)[i])
 		i++;

@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/18 14:30:45 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/01/27 11:55:14 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int				main(int argc, char *argv[])
 	{
 		ret = get_next_line(fd, &line);
 		ft_get_the_values(&scene, &line);
+		free(line);
 	}
 	printf("%s\n", "Esto es resolution");
 	printf("%d\n", (*scene).resolution->x);
