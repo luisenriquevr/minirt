@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/18 14:30:53 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/04 13:06:02 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,23 +37,23 @@ typedef struct		s_vector
 	float			z;
 }					t_vector;
 
-typedef struct		s_color
+typedef struct		s_colour
 {
 	int				r;
 	int				g;
 	int				b;
-}					t_color;
+}					t_colour;
 
 typedef struct		s_resolution
 {
 	int				x;
 	int				y;
-}					t_resolution;;
+}					t_resolution;
 
 typedef struct		s_alight
 {
 	float			ratio;
-	t_color			color;
+	t_colour			colour;
 }					t_alight;
 
 typedef struct		s_camera
@@ -67,22 +67,21 @@ typedef struct		s_light
 {
 	t_vector		position;
 	float			ratio;
-	t_color			color;
+	t_colour			colour;
 }					t_light;
 
 typedef struct		s_sphere
 {
 	t_vector		position;
 	float			diameter;
-	t_color			color;
+	t_colour			colour;
 }					t_sphere;
 
 typedef struct		s_plane
 {
 	t_vector		position;
-	t_vector		orientation;
-	float			high;
-	t_color			color;
+	t_vector		orientation;;
+	t_colour			colour;
 }					t_plane;
 
 typedef struct		s_square
@@ -90,7 +89,7 @@ typedef struct		s_square
 	t_vector		position;
 	t_vector		orientation;
 	float			high;
-	t_color			color;
+	t_colour			colour;
 }					t_square;
 
 typedef struct		s_cylinder
@@ -99,7 +98,7 @@ typedef struct		s_cylinder
 	t_vector		orientation;
 	float			diameter;
 	float			high;
-	t_color			color;
+	t_colour			colour;
 }					t_cylinder;
 
 typedef struct		s_triangle
@@ -107,7 +106,7 @@ typedef struct		s_triangle
 	t_vector		one;
 	t_vector		two;
 	t_vector		three;
-	t_color			color;
+	t_colour			colour;
 }					t_triangle;
 
 typedef struct		s_scene
@@ -144,11 +143,14 @@ int					main(int argc, char *argv[]);
 */
 void				ft_get_the_values(t_scene **scene, char **line);
 void				ft_get_alight(t_scene **scene, char **line);
-t_color				ft_get_rgb(char *line);
+t_colour			ft_get_rgb(char *line);
 float				ft_atof(const char *str);
 t_vector			ft_get_vector(char *line);
 void				ft_get_camera(t_scene **scene, char **line);
 void				ft_get_light(t_scene **scene, char **line);
+void				ft_get_plane(t_scene **scene, char **line);
+void				ft_get_sphere(t_scene **scene, char **line);
+
 
 /*
 ** FUNCION PARA INICIAR LA ESTRUCTURA

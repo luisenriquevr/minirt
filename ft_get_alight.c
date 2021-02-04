@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 19:03:58 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/18 14:30:20 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/04 13:03:27 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void				ft_get_alight(t_scene **scene, char **line)
 		i++;
 	while ((*line)[i] && ((*line)[i] < '0' || (*line)[i] > '9'))
 		i++;
-	alight->color = ft_get_rgb(&(*line)[i]);
+	alight->colour = ft_get_rgb(&(*line)[i]);
 	(*scene)->alight = alight;
 	return ;
 }

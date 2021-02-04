@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 18:06:32 by lvarela           #+#    #+#             */
-/*   Updated: 2020/12/07 18:36:00 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/04 13:03:29 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void			ft_get_light(t_scene **scene, char **line)
 		i++;
 	while ((*line)[i] == ' ' && (*line)[i])
 		i++;
-	light->color = ft_get_rgb(&(*line)[i]);
+	light->colour = ft_get_rgb(&(*line)[i]);
 	(*scene)->light = light;
 	return ;
 }

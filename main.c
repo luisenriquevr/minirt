@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2021/01/27 11:55:14 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/04 13:03:43 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int				main(int argc, char *argv[])
 	printf("%d\n", (*scene).resolution->y);
 	printf("%s\n", "Esto es alight");
 	printf("%f\n", (*scene).alight->ratio);
-	printf("%d\n", (*scene).alight->color.r);
-	printf("%d\n", (*scene).alight->color.g);
-	printf("%d\n", (*scene).alight->color.b);
+	printf("%d\n", (*scene).alight->colour.r);
+	printf("%d\n", (*scene).alight->colour.g);
+	printf("%d\n", (*scene).alight->colour.b);
 	printf("%s\n", "Esto es camera");
 	printf("%f\n", (*scene).camera->position.x);
 	printf("%f\n", (*scene).camera->position.y);
@@ -53,9 +53,9 @@ int				main(int argc, char *argv[])
 	printf("%f\n", (*scene).light->position.y);
 	printf("%f\n", (*scene).light->position.z);
 	printf("%f\n", (*scene).light->ratio);
-	printf("%d\n", (*scene).light->color.r);
-	printf("%d\n", (*scene).light->color.g);
-	printf("%d\n", (*scene).light->color.b);
+	printf("%d\n", (*scene).light->colour.r);
+	printf("%d\n", (*scene).light->colour.g);
+	printf("%d\n", (*scene).light->colour.b);
 
 	return(ret);
 }

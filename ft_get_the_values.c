@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 11:47:16 by lvarela           #+#    #+#             */
-/*   Updated: 2021/01/27 11:57:09 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/04 13:04:49 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,9 @@ void				ft_get_the_values(t_scene **scene, char **line)
 		ft_get_camera(scene, line);
 	else if ((*line)[0] == 'l')
 		ft_get_light(scene, line);
+	else if ((*line)[0] == 'p' && (*line)[1] == 'l')
+		ft_get_plane(scene, line);
+	else if ((*line)[0] == 's' && (*line)[1] == 'p')
+		ft_get_sphere(scene, line);
 	return ;
 }
