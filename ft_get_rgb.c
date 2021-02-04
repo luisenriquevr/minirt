@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 10:49:33 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/04 13:03:36 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/04 14:45:35 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_colour         ft_get_rgb(char *line)
 	t_colour		colour;
 	
 	i = 0;
+	while (line[i] && line[i] == ' ')
+		i++;
 	colour.r = ft_atoi(&line[i]);
 	while (line[i] && line[i] != ',')
 		i++;

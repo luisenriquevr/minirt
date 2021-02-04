@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/04 13:03:43 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/04 15:55:01 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,17 @@ int				main(int argc, char *argv[])
 		ft_get_the_values(&scene, &line);
 		free(line);
 	}
+	
 	printf("%s\n", "Esto es resolution");
 	printf("%d\n", (*scene).resolution->x);
 	printf("%d\n", (*scene).resolution->y);
+	
 	printf("%s\n", "Esto es alight");
 	printf("%f\n", (*scene).alight->ratio);
 	printf("%d\n", (*scene).alight->colour.r);
 	printf("%d\n", (*scene).alight->colour.g);
 	printf("%d\n", (*scene).alight->colour.b);
+	
 	printf("%s\n", "Esto es camera");
 	printf("%f\n", (*scene).camera->position.x);
 	printf("%f\n", (*scene).camera->position.y);
@@ -48,6 +51,7 @@ int				main(int argc, char *argv[])
 	printf("%f\n", (*scene).camera->orientation.y);
 	printf("%f\n", (*scene).camera->orientation.z);
 	printf("%d\n", (*scene).camera->fov);
+	
 	printf("%s\n", "Esto es light");
 	printf("%f\n", (*scene).light->position.x);
 	printf("%f\n", (*scene).light->position.y);
@@ -56,6 +60,25 @@ int				main(int argc, char *argv[])
 	printf("%d\n", (*scene).light->colour.r);
 	printf("%d\n", (*scene).light->colour.g);
 	printf("%d\n", (*scene).light->colour.b);
-
+	
+	printf("%s\n", "Esto es plane");
+	printf("%f\n", (*scene).plane->position.x);
+	printf("%f\n", (*scene).plane->position.y);
+	printf("%f\n", (*scene).plane->position.z);
+	printf("%f\n", (*scene).plane->orientation.x);
+	printf("%f\n", (*scene).plane->orientation.y);
+	printf("%f\n", (*scene).plane->orientation.z);
+	printf("%d\n", (*scene).plane->colour.r);
+	printf("%d\n", (*scene).plane->colour.g);
+	printf("%d\n", (*scene).plane->colour.b);
+	
+	printf("%s\n", "Esto es sphere");
+	printf("%f\n", (*scene).sphere->position.x);
+	printf("%f\n", (*scene).sphere->position.y);
+	printf("%f\n", (*scene).sphere->position.z);
+	printf("%f\n", (*scene).sphere->diameter);
+	printf("%d\n", (*scene).sphere->colour.r);
+	printf("%d\n", (*scene).sphere->colour.g);
+	printf("%d\n", (*scene).sphere->colour.b);
 	return(ret);
 }

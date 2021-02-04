@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/04 13:06:02 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/04 15:02:14 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ typedef struct		s_light
 {
 	t_vector		position;
 	float			ratio;
-	t_colour			colour;
+	t_colour		colour;
 }					t_light;
 
 typedef struct		s_sphere
