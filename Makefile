@@ -12,12 +12,14 @@ SRCS =	get_next_line/get_next_line_utils.c \
 		ft_get_the_values.c \
 		ft_scene_init.c \
 		ft_get_vector.c \
+		ft_next_value.c \
 		ft_get_camera.c \
 		ft_get_light.c \
 		ft_get_plane.c \
 		ft_get_sphere.c \
 		ft_get_square.c \
-		ft_get_cylinder.c
+		ft_get_cylinder.c \
+		ft_get_triangle.c
 
 OBJS = $(SRCS:.c=.o)
 

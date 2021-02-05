@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/05 11:25:20 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/05 11:42:23 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ typedef struct		s_resolution
 typedef struct		s_alight
 {
 	float			ratio;
-	t_colour			colour;
+	t_colour		colour;
 }					t_alight;
 
 typedef struct		s_camera
@@ -74,14 +74,14 @@ typedef struct		s_sphere
 {
 	t_vector		position;
 	float			diameter;
-	t_colour			colour;
+	t_colour		colour;
 }					t_sphere;
 
 typedef struct		s_plane
 {
 	t_vector		position;
 	t_vector		orientation;;
-	t_colour			colour;
+	t_colour		colour;
 }					t_plane;
 
 typedef struct		s_square
@@ -89,7 +89,7 @@ typedef struct		s_square
 	t_vector		position;
 	t_vector		orientation;
 	float			high;
-	t_colour			colour;
+	t_colour		colour;
 }					t_square;
 
 typedef struct		s_cylinder
@@ -98,15 +98,15 @@ typedef struct		s_cylinder
 	t_vector		orientation;
 	float			diameter;
 	float			high;
-	t_colour			colour;
+	t_colour		colour;
 }					t_cylinder;
 
 typedef struct		s_triangle
 {
-	t_vector		one;
-	t_vector		two;
-	t_vector		three;
-	t_colour			colour;
+	t_vector		a;
+	t_vector		b;
+	t_vector		c;
+	t_colour		colour;
 }					t_triangle;
 
 typedef struct		s_scene
@@ -146,12 +146,15 @@ void				ft_get_alight(t_scene **scene, char **line);
 t_colour			ft_get_rgb(char *line);
 float				ft_atof(const char *str);
 t_vector			ft_get_vector(char *line);
+int					ft_next_value(char *line);
 void				ft_get_camera(t_scene **scene, char **line);
 void				ft_get_light(t_scene **scene, char **line);
 void				ft_get_plane(t_scene **scene, char **line);
 void				ft_get_sphere(t_scene **scene, char **line);
 void				ft_get_square(t_scene **scene, char **line);
 void				ft_get_cylinder(t_scene **scene, char **line);
+void				ft_get_triangle(t_scene **scene, char **line);
+
 
 
 /*

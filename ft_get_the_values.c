@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 11:47:16 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/04 13:04:49 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/05 11:59:22 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,11 @@ void				ft_get_the_values(t_scene **scene, char **line)
 		ft_get_plane(scene, line);
 	else if ((*line)[0] == 's' && (*line)[1] == 'p')
 		ft_get_sphere(scene, line);
+	else if ((*line)[0] == 's' && (*line)[1] == 'q')
+		ft_get_square(scene, line);
+	else if ((*line)[0] == 'c' && (*line)[1] == 'y')
+		ft_get_cylinder(scene, line);
+	else if ((*line)[0] == 't' && (*line)[1] == 'r')
+		ft_get_triangle(scene, line);
 	return ;
 }

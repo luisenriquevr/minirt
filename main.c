@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/05 11:16:55 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/05 11:54:49 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ int				main(int argc, char *argv[])
 	printf("%d\n", (*scene).sphere->colour.r);
 	printf("%d\n", (*scene).sphere->colour.g);
 	printf("%d\n", (*scene).sphere->colour.b);
-	return(ret);
 
 	printf("%s\n", "Esto es square");
 	printf("%f\n", (*scene).square->position.x);
@@ -93,4 +92,33 @@ int				main(int argc, char *argv[])
 	printf("%d\n", (*scene).square->colour.r);
 	printf("%d\n", (*scene).square->colour.g);
 	printf("%d\n", (*scene).square->colour.b);
+
+	printf("%s\n", "Esto es cylinder");
+	printf("%f\n", (*scene).cylinder->position.x);
+	printf("%f\n", (*scene).cylinder->position.y);
+	printf("%f\n", (*scene).cylinder->position.z);
+	printf("%f\n", (*scene).cylinder->orientation.x);
+	printf("%f\n", (*scene).cylinder->orientation.y);
+	printf("%f\n", (*scene).cylinder->orientation.z);
+	printf("%f\n", (*scene).cylinder->diameter);
+	printf("%f\n", (*scene).cylinder->high);
+	printf("%d\n", (*scene).cylinder->colour.r);
+	printf("%d\n", (*scene).cylinder->colour.g);
+	printf("%d\n", (*scene).cylinder->colour.b);
+
+	printf("%s\n", "Esto es triangle");
+	printf("%f\n", (*scene).triangle->a.x);
+	printf("%f\n", (*scene).triangle->a.y);
+	printf("%f\n", (*scene).triangle->a.z);
+	printf("%f\n", (*scene).triangle->b.x);
+	printf("%f\n", (*scene).triangle->b.y);
+	printf("%f\n", (*scene).triangle->b.z);
+	printf("%f\n", (*scene).triangle->c.x);
+	printf("%f\n", (*scene).triangle->c.y);
+	printf("%f\n", (*scene).triangle->c.z);
+	printf("%d\n", (*scene).triangle->colour.r);
+	printf("%d\n", (*scene).triangle->colour.g);
+	printf("%d\n", (*scene).triangle->colour.b);
+	
+	return(ret);
 }
