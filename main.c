@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/04 15:55:01 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/05 11:16:55 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,16 @@ int				main(int argc, char *argv[])
 	printf("%d\n", (*scene).sphere->colour.g);
 	printf("%d\n", (*scene).sphere->colour.b);
 	return(ret);
+
+	printf("%s\n", "Esto es square");
+	printf("%f\n", (*scene).square->position.x);
+	printf("%f\n", (*scene).square->position.y);
+	printf("%f\n", (*scene).square->position.z);
+	printf("%f\n", (*scene).square->orientation.x);
+	printf("%f\n", (*scene).square->orientation.y);
+	printf("%f\n", (*scene).square->orientation.z);
+	printf("%f\n", (*scene).square->high);
+	printf("%d\n", (*scene).square->colour.r);
+	printf("%d\n", (*scene).square->colour.g);
+	printf("%d\n", (*scene).square->colour.b);
 }
