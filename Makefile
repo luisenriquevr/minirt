@@ -15,7 +15,9 @@ SRCS =	get_next_line/get_next_line_utils.c \
 		ft_get_camera.c \
 		ft_get_light.c \
 		ft_get_plane.c \
-		ft_get_sphere.c
+		ft_get_sphere.c \
+		ft_get_square.c \
+		ft_get_cylinder.c
 
 OBJS = $(SRCS:.c=.o)
 

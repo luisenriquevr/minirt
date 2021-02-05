@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/04 15:02:14 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/05 11:25:20 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ typedef struct		s_scene
 
 
 /*
-**  FUNCIONES GET_NEXT_LINE
+** FUNCIONES GET_NEXT_LINE
 */
 size_t				ft_strlen(char *str);
 char				*ft_strdup(char *s1);
@@ -150,6 +150,8 @@ void				ft_get_camera(t_scene **scene, char **line);
 void				ft_get_light(t_scene **scene, char **line);
 void				ft_get_plane(t_scene **scene, char **line);
 void				ft_get_sphere(t_scene **scene, char **line);
+void				ft_get_square(t_scene **scene, char **line);
+void				ft_get_cylinder(t_scene **scene, char **line);
 
 
 /*
