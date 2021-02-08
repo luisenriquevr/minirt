@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 10:55:37 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/07 14:45:37 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/08 20:29:50 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,5 @@ float			ft_atof(const char *str)
 			sign = -1;
 	while (str[i] >= '0' && str[i] <= '9')
 		num = (num * 10) + (str[i++] - 48);
-	while (str[i] != '.' && str[i])
-		i++;
 	return (ft_dot_number(&str[i], sign, num));
 }

@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 11:15:04 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/08 19:47:07 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/08 19:56:55 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void			ft_rotation(t_vector *vector, t_vector *angle)
 
 void			ft_anti_rotation(t_vector *vector, t_vector *angle)
 {
-	rz(vector, -angle->x);
-	ry(vector, -angle->y);
-	rz(vector, -angle->z);
+	ft_rz(vector, -angle->x);
+	ft_ry(vector, -angle->y);
+	ft_rz(vector, -angle->z);
 }
