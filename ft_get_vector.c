@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 19:22:31 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/04 15:46:24 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/05 12:12:44 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_vector		ft_get_vector(char *line)
 	int			i;
 
 	i = 0;
-	vector.x = ft_atof(&(line)[i]);
+	vector.x = ft_atof(&line[i]);
 	while (line[i] != ',' && line[i])
 		i++;
 	i++;
