@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/05 11:42:23 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/12 16:58:44 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,23 +137,25 @@ int					get_next_line(int fd, char **line);
 ** FUNCION MADRE
 */
 int					main(int argc, char *argv[]);
+int					ft_minirt(char *txt, int save);
 
 /*
 ** FUNCIONES RECOGIDA DE VALORES
 */
-void				ft_get_the_values(t_scene **scene, char **line);
-void				ft_get_alight(t_scene **scene, char **line);
+t_scene				*ft_scene_reader(char *txt);
+void				ft_get_the_values(t_scene **scene, char *line);
+void				ft_get_alight(t_scene **scene, char *line);
 t_colour			ft_get_rgb(char *line);
 float				ft_atof(const char *str);
 t_vector			ft_get_vector(char *line);
 int					ft_next_value(char *line);
-void				ft_get_camera(t_scene **scene, char **line);
-void				ft_get_light(t_scene **scene, char **line);
-void				ft_get_plane(t_scene **scene, char **line);
-void				ft_get_sphere(t_scene **scene, char **line);
-void				ft_get_square(t_scene **scene, char **line);
-void				ft_get_cylinder(t_scene **scene, char **line);
-void				ft_get_triangle(t_scene **scene, char **line);
+void				ft_get_camera(t_scene **scene, char *line);
+void				ft_get_light(t_scene **scene, char *line);
+void				ft_get_plane(t_scene **scene, char *line);
+void				ft_get_sphere(t_scene **scene, char *line);
+void				ft_get_square(t_scene **scene, char *line);
+void				ft_get_cylinder(t_scene **scene, char *line);
+void				ft_get_triangle(t_scene **scene, char *line);
 
 
 

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/05 11:54:49 by lvarela          ###   ########.fr       */
+/*   Created: 2021/02/11 14:12:30 by lvarela           #+#    #+#             */
+/*   Updated: 2021/02/12 17:15:04 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,111 +14,15 @@
 
 int				main(int argc, char *argv[])
 {
-	t_scene		*scene;
-	int         fd;
-	char        *line;
-	int         ret;
-	
 	if (argc < 2 || argc > 3)
 		return(printf("Argumentos incorrectos\n"));
-	if ((fd = open(argv[1], O_RDONLY)) <= 0)
-		return(printf("Archivo vacio o incorrecto\n"));
-	scene = (t_scene *) malloc(sizeof(t_scene));
-	ft_scene_init(&scene);
-	ret = 1;
-	while (ret > 0)
+	if (argc == 3)
 	{
-		ret = get_next_line(fd, &line);
-		ft_get_the_values(&scene, &line);
-		free(line);
+		//if (!ft_strncmp(argv[2], "--save", sizeof("--save")))
+		//	return (ft_minirt(argv[1], 1));
+		//else
+			return (ft_minirt(argv[1], 0));
 	}
-	
-	printf("%s\n", "Esto es resolution");
-	printf("%d\n", (*scene).resolution->x);
-	printf("%d\n", (*scene).resolution->y);
-	
-	printf("%s\n", "Esto es alight");
-	printf("%f\n", (*scene).alight->ratio);
-	printf("%d\n", (*scene).alight->colour.r);
-	printf("%d\n", (*scene).alight->colour.g);
-	printf("%d\n", (*scene).alight->colour.b);
-	
-	printf("%s\n", "Esto es camera");
-	printf("%f\n", (*scene).camera->position.x);
-	printf("%f\n", (*scene).camera->position.y);
-	printf("%f\n", (*scene).camera->position.z);
-	printf("%f\n", (*scene).camera->orientation.x);
-	printf("%f\n", (*scene).camera->orientation.y);
-	printf("%f\n", (*scene).camera->orientation.z);
-	printf("%d\n", (*scene).camera->fov);
-	
-	printf("%s\n", "Esto es light");
-	printf("%f\n", (*scene).light->position.x);
-	printf("%f\n", (*scene).light->position.y);
-	printf("%f\n", (*scene).light->position.z);
-	printf("%f\n", (*scene).light->ratio);
-	printf("%d\n", (*scene).light->colour.r);
-	printf("%d\n", (*scene).light->colour.g);
-	printf("%d\n", (*scene).light->colour.b);
-	
-	printf("%s\n", "Esto es plane");
-	printf("%f\n", (*scene).plane->position.x);
-	printf("%f\n", (*scene).plane->position.y);
-	printf("%f\n", (*scene).plane->position.z);
-	printf("%f\n", (*scene).plane->orientation.x);
-	printf("%f\n", (*scene).plane->orientation.y);
-	printf("%f\n", (*scene).plane->orientation.z);
-	printf("%d\n", (*scene).plane->colour.r);
-	printf("%d\n", (*scene).plane->colour.g);
-	printf("%d\n", (*scene).plane->colour.b);
-	
-	printf("%s\n", "Esto es sphere");
-	printf("%f\n", (*scene).sphere->position.x);
-	printf("%f\n", (*scene).sphere->position.y);
-	printf("%f\n", (*scene).sphere->position.z);
-	printf("%f\n", (*scene).sphere->diameter);
-	printf("%d\n", (*scene).sphere->colour.r);
-	printf("%d\n", (*scene).sphere->colour.g);
-	printf("%d\n", (*scene).sphere->colour.b);
-
-	printf("%s\n", "Esto es square");
-	printf("%f\n", (*scene).square->position.x);
-	printf("%f\n", (*scene).square->position.y);
-	printf("%f\n", (*scene).square->position.z);
-	printf("%f\n", (*scene).square->orientation.x);
-	printf("%f\n", (*scene).square->orientation.y);
-	printf("%f\n", (*scene).square->orientation.z);
-	printf("%f\n", (*scene).square->high);
-	printf("%d\n", (*scene).square->colour.r);
-	printf("%d\n", (*scene).square->colour.g);
-	printf("%d\n", (*scene).square->colour.b);
-
-	printf("%s\n", "Esto es cylinder");
-	printf("%f\n", (*scene).cylinder->position.x);
-	printf("%f\n", (*scene).cylinder->position.y);
-	printf("%f\n", (*scene).cylinder->position.z);
-	printf("%f\n", (*scene).cylinder->orientation.x);
-	printf("%f\n", (*scene).cylinder->orientation.y);
-	printf("%f\n", (*scene).cylinder->orientation.z);
-	printf("%f\n", (*scene).cylinder->diameter);
-	printf("%f\n", (*scene).cylinder->high);
-	printf("%d\n", (*scene).cylinder->colour.r);
-	printf("%d\n", (*scene).cylinder->colour.g);
-	printf("%d\n", (*scene).cylinder->colour.b);
-
-	printf("%s\n", "Esto es triangle");
-	printf("%f\n", (*scene).triangle->a.x);
-	printf("%f\n", (*scene).triangle->a.y);
-	printf("%f\n", (*scene).triangle->a.z);
-	printf("%f\n", (*scene).triangle->b.x);
-	printf("%f\n", (*scene).triangle->b.y);
-	printf("%f\n", (*scene).triangle->b.z);
-	printf("%f\n", (*scene).triangle->c.x);
-	printf("%f\n", (*scene).triangle->c.y);
-	printf("%f\n", (*scene).triangle->c.z);
-	printf("%d\n", (*scene).triangle->colour.r);
-	printf("%d\n", (*scene).triangle->colour.g);
-	printf("%d\n", (*scene).triangle->colour.b);
-	
-	return(ret);
+	else
+		return (ft_minirt(argv[1], 0));
 }

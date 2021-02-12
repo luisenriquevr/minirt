@@ -3,8 +3,10 @@ CC = gcc
 NAME = miniRT
 
 FLAGS = -Wall -Wextra -Werror
-SRCS =	get_next_line/get_next_line_utils.c \
+SRCS =	main.c \
+		get_next_line/get_next_line_utils.c \
 		get_next_line/get_next_line.c \
+		ft_minirt.c \
 		ft_atof.c \
 		ft_get_alight.c \
 		ft_get_resolution.c \
@@ -26,7 +28,7 @@ OBJS = $(SRCS:.c=.o)
 $(NAME) : $(OBJS)
 		@cd libft && $(MAKE)
 		@cp libft/libft.a libft.a
-		@gcc  $(OBJS) libft.a main.c -o $(NAME) -lm
+		@gcc  $(OBJS) libft.a -o $(NAME) -lm
 
 f:	
 	gcc *.c libft/*.c
