@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/12 16:58:44 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/15 21:50:32 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,11 @@
 # include <math.h>
 # include <errno.h>
 # include <fenv.h>
+# include "./v_operations/v_operations.h"
 
 /*
 ** ESTRUCTURAS
 */
-typedef struct		s_vector
-{
-	float			x;
-	float			y;
-	float			z;
-}					t_vector;
 
 typedef struct		s_colour
 {
