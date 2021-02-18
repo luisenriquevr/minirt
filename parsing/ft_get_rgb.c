@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_cross.c                                  :+:      :+:    :+:   */
+/*   ft_get_rgb.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/15 21:07:17 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:09:57 by lvarela          ###   ########.fr       */
+/*   Created: 2020/11/23 10:49:33 by lvarela           #+#    #+#             */
+/*   Updated: 2021/02/18 19:05:11 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minirt.h"
 
-t_vector		ft_vector_croos(t_vector v1, t_vector v2)
+t_colour         ft_get_rgb(char *line)
 {
-	t_vector	new_vec;
+	int			i;
+	t_colour		colour;
 	
-	new_vec.x = v1.y * v2.z - v1.z * v2.y;
-	new_vec.y = v1.z * v2.x - v1.x * v2.z;
-	new_vec.z = v1.x * v2.y - v1.y * v2.x;
-	return (new_vec);
+	i = 0;
+	while (line[i] && line[i] == ' ')
+		i++;
+	colour.r = ft_atoi(&line[i]);
+	while (line[i] && line[i] != ',')
+		i++;
+	while (line[i] && (line[i] < '0' || line[i] > '9'))
+		i++;
+	colour.g = ft_atoi(&line[i]);
+	while (line[i] && line[i] != ',')
+		i++;
+	while (line[i] && (line[i] < '0' || line[i] > '9'))
+		i++;
+	colour.b = ft_atoi(&line[i]);
+	return(colour);
 }

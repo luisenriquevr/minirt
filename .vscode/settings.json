@@ -3,6 +3,9 @@
 		"__node_handle": "cpp",
 		"string": "cpp",
 		"unordered_map": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"minirt.h": "c",
+		"ft_parsing.h": "c",
+		"v_operations.h": "c"
 	}
 }

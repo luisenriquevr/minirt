@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_cross.c                                  :+:      :+:    :+:   */
+/*   ft_next_value.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/15 21:07:17 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:09:57 by lvarela          ###   ########.fr       */
+/*   Created: 2021/02/05 11:38:16 by lvarela           #+#    #+#             */
+/*   Updated: 2021/02/18 19:05:26 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minirt.h"
 
-t_vector		ft_vector_croos(t_vector v1, t_vector v2)
+int				ft_next_value(char *line)
 {
-	t_vector	new_vec;
+	int			i;
 	
-	new_vec.x = v1.y * v2.z - v1.z * v2.y;
-	new_vec.y = v1.z * v2.x - v1.x * v2.z;
-	new_vec.z = v1.x * v2.y - v1.y * v2.x;
-	return (new_vec);
+	i = 0;
+	while (line[i] == ' ' && line[i])
+		i++;
+	while (line[i] != ' ' && line[i])
+		i++;
+	return (i);
 }

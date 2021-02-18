@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_cross.c                                  :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/15 21:07:17 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:09:57 by lvarela          ###   ########.fr       */
+/*   Created: 2019/11/07 12:22:11 by lvarela           #+#    #+#             */
+/*   Updated: 2019/11/20 17:57:43 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minirt.h"
+#include "libft.h"
 
-t_vector		ft_vector_croos(t_vector v1, t_vector v2)
+void	ft_bzero(void *s, size_t n)
 {
-	t_vector	new_vec;
-	
-	new_vec.x = v1.y * v2.z - v1.z * v2.y;
-	new_vec.y = v1.z * v2.x - v1.x * v2.z;
-	new_vec.z = v1.x * v2.y - v1.y * v2.x;
-	return (new_vec);
+	unsigned char *x;
+
+	x = (unsigned char *)s;
+	while (n--)
+		*x++ = '\0';
 }

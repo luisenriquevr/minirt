@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_cross.c                                  :+:      :+:    :+:   */
+/*   ft_get_sphere.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/15 21:07:17 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:09:57 by lvarela          ###   ########.fr       */
+/*   Created: 2021/02/04 13:06:15 by lvarela           #+#    #+#             */
+/*   Updated: 2021/02/18 19:05:14 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minirt.h"
 
-t_vector		ft_vector_croos(t_vector v1, t_vector v2)
+void			ft_get_sphere(t_scene **scene, char *line)
 {
-	t_vector	new_vec;
+	t_sphere	*sphere;
+	int			i;
 	
-	new_vec.x = v1.y * v2.z - v1.z * v2.y;
-	new_vec.y = v1.z * v2.x - v1.x * v2.z;
-	new_vec.z = v1.x * v2.y - v1.y * v2.x;
-	return (new_vec);
+	sphere = (t_sphere *) malloc(sizeof(t_sphere) * 1);
+	i = 2;
+    sphere->position = ft_get_vector(&line[i]);
+	i += ft_next_value(&line[i]);
+    sphere->diameter = ft_atof(&line[i]);
+	i += ft_next_value(&line[i]);
+    sphere->colour = ft_get_rgb(&line[i]);
+	(*scene)->sphere = sphere;
+	return ;
 }

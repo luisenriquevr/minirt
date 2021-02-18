@@ -6,38 +6,11 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/12 18:12:14 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/18 18:48:35 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt.h"
-
-t_scene			*ft_scene_reader(char *txt)
-{
-	t_scene		*scene;
-	int         fd;
-	char        *line;
-	int         ret;
-	
-	scene = (t_scene *) malloc(sizeof(t_scene));
-	ret = 1;
-	if ((fd = open(txt, O_RDONLY)) <= 0)
-	{
-		printf("%s\n", "Archivo vacio o incorrecto\n");
-		return (0);
-	}
-	ft_scene_init(&scene);
-	while (ret > 0)
-	{
-		ret = get_next_line(fd, &line);
-		ft_get_the_values(&scene, line);
-		free(line);
-	}
-	if (ret == 0)
-		printf("End\n");
-	//free(line);
-	return (scene);
-}
 
 int				ft_minirt(char *txt, int save)
 {

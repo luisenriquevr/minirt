@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_cross.c                                  :+:      :+:    :+:   */
+/*   ft_get_resolution.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/15 21:07:17 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:09:57 by lvarela          ###   ########.fr       */
+/*   Created: 2020/11/13 19:02:16 by lvarela           #+#    #+#             */
+/*   Updated: 2021/02/18 19:05:09 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minirt.h"
 
-t_vector		ft_vector_croos(t_vector v1, t_vector v2)
+void				ft_get_resolution(t_scene **scene, char *line)
 {
-	t_vector	new_vec;
-	
-	new_vec.x = v1.y * v2.z - v1.z * v2.y;
-	new_vec.y = v1.z * v2.x - v1.x * v2.z;
-	new_vec.z = v1.x * v2.y - v1.y * v2.x;
-	return (new_vec);
+	t_resolution	*resolution;
+	int				i;
+
+	resolution = (t_resolution *)malloc(sizeof(t_resolution) * 1);
+	i = 1;
+	resolution->x = ft_atoi(&line[i]);
+	i += ft_next_value(&line[i]);
+	resolution->y = ft_atoi(&line[i]);
+	(*scene)->resolution = resolution;
+	return ;
 }
+

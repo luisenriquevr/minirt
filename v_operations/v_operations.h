@@ -6,12 +6,12 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 19:56:01 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/16 17:12:31 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/18 19:06:45 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef V_OPERATIONS_H
-# define v_OPERATIONS_H
+# define V_OPERATIONS_H
 
 typedef struct	s_vector
 {

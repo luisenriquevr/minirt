@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_cross.c                                  :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/15 21:07:17 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:09:57 by lvarela          ###   ########.fr       */
+/*   Created: 2019/11/16 18:04:56 by lvarela           #+#    #+#             */
+/*   Updated: 2019/11/20 18:09:56 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minirt.h"
+#include "libft.h"
 
-t_vector		ft_vector_croos(t_vector v1, t_vector v2)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	t_vector	new_vec;
-	
-	new_vec.x = v1.y * v2.z - v1.z * v2.y;
-	new_vec.y = v1.z * v2.x - v1.x * v2.z;
-	new_vec.z = v1.x * v2.y - v1.y * v2.x;
-	return (new_vec);
+	unsigned char	*y;
+	size_t			i;
+
+	y = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (y[i] == (unsigned char)c)
+			return (&y[i]);
+		i++;
+	}
+	return (NULL);
 }
