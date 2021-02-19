@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:40:01 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/19 08:49:36 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 # include <errno.h>
 # include <fenv.h>
 # include "./v_operations/v_operations.h"
-# include "./parsing/ft_parsing.h"
+# include "./parsing/parsing.h"
 # include "./utils/utils.h"
 
 
