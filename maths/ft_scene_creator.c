@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   ft_scene_creator.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/18 19:21:31 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/19 09:56:11 by lvarela          ###   ########.fr       */
+/*   Created: 2021/02/19 10:02:08 by lvarela           #+#    #+#             */
+/*   Updated: 2021/02/19 10:09:47 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "../minirt.h"
 
-# include "stdlib.h"
-# include "stdio.h"
-
-float			ft_atof(const char *str);
-int             ft_key_values(int key, t_scene **scene);
-
-#endif
+int				ft_scene_creator(t_scene *scene)
+{
+	return (0);
+}

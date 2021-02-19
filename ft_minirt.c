@@ -6,17 +6,34 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 18:48:35 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/19 09:59:01 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt.h"
+
+static void		ft_param_error(t_scene *scene)
+{
+	if (scene->resolution == NULL || scene->camera == NULL ||
+		scene->light || scene->alight == NULL)
+		{
+			perror("Parametros incorrectos.\n");
+		}
+}
 
 int				ft_minirt(char *txt, int save)
 {
 	t_scene		*scene;
 	
 	scene = ft_scene_reader(txt);
+	scene->save = save;
+	scene->mlx->mlx_ptr = mlx_init();
+	ft_param_error(scene);
+	scene->mlx->win_ptr = mlx_new_window(scene->mlx->mlx_ptr, scene->resolution->x, scene->resolution->y, "MiniRT");
+	scene->mlx->img_ptr = mlx_new_image(scene->mlx->mlx_ptr, scene->resolution->x, scene->resolution->y);
+	mlx_key_hook(scene->mlx->win_ptr, ft_key_values, &scene);
+	mlx_loop_hook(scene->mlx->mlx_ptr, ft_scene_creator, scene);
+	mlx_loop(scene->mlx->mlx_ptr);
 	
 	
 	printf("%s\n", "Esto es resolution");

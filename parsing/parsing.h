@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parsing.h                                       :+:      :+:    :+:   */
+/*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 14:00:15 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:39:55 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/19 08:59:54 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,13 @@ typedef struct		s_triangle
 	t_colour		colour;
 }					t_triangle;
 
+typedef struct		s_mlx
+{
+	void			*mlx_ptr;
+	void			*win_ptr;
+	void			*img_ptr;
+}					t_mlx;
+
 typedef struct		s_scene
 {
 	t_resolution	*resolution;
@@ -99,6 +106,8 @@ typedef struct		s_scene
 	t_square		*square;
 	t_cylinder		*cylinder;
 	t_triangle		*triangle;
+	t_mlx			*mlx;
+	int				save;
 }					t_scene;
 
 void				ft_get_the_values(t_scene **scene, char *line);

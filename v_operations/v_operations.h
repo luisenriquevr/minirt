@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 19:56:01 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:06:45 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/02/19 10:01:09 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ float			ft_vector_magnitude(t_vector v);
 t_vector		ft_vector_normalize(t_vector v);
 t_vector		ft_vector_invert(t_vector v);
 float			ft_vector_distance(t_vector v1, t_vector v2);
+void			ft_vector_rotation(t_vector *vector, t_vector *angle);
+void			ft_vector_anti_rotation(t_vector *vector, t_vector *angle);
 
 #endif

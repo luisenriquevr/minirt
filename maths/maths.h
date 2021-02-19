@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   maths.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/18 19:21:31 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/19 09:56:11 by lvarela          ###   ########.fr       */
+/*   Created: 2021/02/19 10:04:50 by lvarela           #+#    #+#             */
+/*   Updated: 2021/02/19 10:11:04 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#ifndef MATHS_H
+# define MATHS_H
 
-# include "stdlib.h"
-# include "stdio.h"
+# include "../v_operations/v_operations.h"
+# include "../parsing/parsing.h"
 
-float			ft_atof(const char *str);
-int             ft_key_values(int key, t_scene **scene);
+int				ft_scene_creator(t_scene *scene);
 
 #endif
