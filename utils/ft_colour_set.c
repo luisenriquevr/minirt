@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_key_values.c                                    :+:      :+:    :+:   */
+/*   ft_colour_set.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/19 09:53:57 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/23 20:01:28 by lvarela          ###   ########.fr       */
+/*   Created: 2021/03/04 10:07:29 by lvarela           #+#    #+#             */
+/*   Updated: 2021/03/04 10:09:33 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minirt.h"
 
-int				ft_key_values(int key, t_scene **scene)
+t_colour		ft_colour_set(float r, float g, float b)
 {
-	return (0);
+	t_colour	new_colour;
+
+	new_colour.r = r;
+	new_colour.g = g;
+	new_colour.b = b;
+	return (new_colour);
 }

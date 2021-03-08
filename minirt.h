@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:04:50 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/19 08:49:36 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/03/05 17:58:31 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@
 # include "./v_operations/v_operations.h"
 # include "./parsing/parsing.h"
 # include "./utils/utils.h"
+# include "./maths/maths.h"
+# include "./printf/libftprintf.h"
 
 
 int					get_next_line(int fd, char **line);

@@ -8,7 +8,27 @@ SRCS =	main.c \
 		get_next_line/get_next_line.c \
 		ft_minirt.c \
 		\
+		maths/ft_compute_ray.c \
+		maths/ft_constant_values.c \
+		maths/ft_get_colour.c \
+		maths/ft_get_hit_colour.c \
+		maths/get_hit_sphere.c \
+		maths/ft_get_hit.c \
+		maths/ft_init_hit.c \
+		maths/ft_phong_calculate.c \
+		maths/ft_rotation.c \
+		maths/ft_scene_calc.c \
+		maths/ft_scene_creator \
+		\
 		utils/ft_atof.c \
+		utils/ft_color_to_int.c \
+		utils/ft_colour_mul.c \
+		utils/ft_colour_set.c \
+		utils/ft_colour_to_vector_struct.c \
+		utils/ft_colour_to_vector.c \
+		utils/ft_key_values.c \
+		utils/ft_save_image.c \
+		utils/ft_vector_to_colour.c \
 		\
 		parsing/ft_get_alight.c \
 		parsing/ft_get_resolution.c \
@@ -38,7 +58,8 @@ SRCS =	main.c \
 		v_operations/ft_vector_mul.c \
 		v_operations/ft_vector_normalize.c \
 		v_operations/ft_vector_plus.c \
-		v_operations/ft_vector_set.c 
+		v_operations/ft_vector_set.c \
+		v_operations/ft_vector_clamp.c \
 
 OBJS = $(SRCS:.c=.o)
 

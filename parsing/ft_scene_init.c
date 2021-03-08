@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 10:41:01 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:05:29 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/03/04 15:56:28 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void                 ft_scene_init(t_scene **scene)
 {
 	(*scene)->alight = NULL;
 	(*scene)->camera = NULL;
+	(*scene)->n_cameras = 0;
 	(*scene)->cylinder = NULL;
 	(*scene)->light = NULL;
 	(*scene)->plane = NULL;
@@ -23,4 +24,6 @@ void                 ft_scene_init(t_scene **scene)
 	(*scene)->sphere = NULL;
 	(*scene)->square = NULL;
 	(*scene)->triangle = NULL;
+	(*scene)->save = 0;
+	(*scene)->mlx = (t_mlx *) malloc(sizeof(t_mlx));
 }

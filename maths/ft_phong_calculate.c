@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_key_values.c                                    :+:      :+:    :+:   */
+/*   ft_phong_calculate.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/19 09:53:57 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/23 20:01:28 by lvarela          ###   ########.fr       */
+/*   Created: 2021/03/04 10:16:49 by lvarela           #+#    #+#             */
+/*   Updated: 2021/03/04 10:52:32 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minirt.h"
 
-int				ft_key_values(int key, t_scene **scene)
+static t_phong	ft_phong_calculate(t_scene *scene)
 {
-	return (0);
+	t_phong		phong;
+
+	phong.alight = ft_vector_mul(ft_colour_to_vector(
+				ft_colour_to_vector_struct(scene->alight->colour)),
+					scene->alight->ratio);
+	phong.distance = ft_vector_set(0, 0, 0);
+	phong.surface = ft_vector_set(0, 0, 0);
+	return (phong);
 }

@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 14:04:04 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:42:18 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/03/04 15:52:49 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ t_scene			*ft_scene_reader(char *txt)
 	ret = 1;
 	if ((fd = open(txt, O_RDONLY)) <= 0)
 	{
-		printf("%s\n", "Archivo vacio o incorrecto\n");
-		return (0);
+		perror("Archivo vacio o incorrecto\n");
+		exit (0);
 	}
 	ft_scene_init(&scene);
 	while (ret > 0)
@@ -34,6 +34,8 @@ t_scene			*ft_scene_reader(char *txt)
 		free(line);
 	}
 	if (ret == 0)
-		printf("End\n");
+		perror("End\n");
+	if (ret == 1)
+		perror("End\n");
 	return (scene);
 }

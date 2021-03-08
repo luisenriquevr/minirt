@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:41:53 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/19 09:59:01 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/03/08 10:33:22 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int				ft_minirt(char *txt, int save)
 	mlx_loop_hook(scene->mlx->mlx_ptr, ft_scene_creator, scene);
 	mlx_loop(scene->mlx->mlx_ptr);
 	
-	
+	/*
 	printf("%s\n", "Esto es resolution");
 	printf("%d\n", (*scene).resolution->x);
 	printf("%d\n", (*scene).resolution->y);
@@ -79,7 +79,7 @@ int				ft_minirt(char *txt, int save)
 	printf("%f\n", (*scene).sphere->position.x);
 	printf("%f\n", (*scene).sphere->position.y);
 	printf("%f\n", (*scene).sphere->position.z);
-	printf("%f\n", (*scene).sphere->diameter);
+	printf("%f\n", (*scene).sphere->radius);
 	printf("%d\n", (*scene).sphere->colour.r);
 	printf("%d\n", (*scene).sphere->colour.g);
 	printf("%d\n", (*scene).sphere->colour.b);
@@ -91,7 +91,7 @@ int				ft_minirt(char *txt, int save)
 	printf("%f\n", (*scene).square->orientation.x);
 	printf("%f\n", (*scene).square->orientation.y);
 	printf("%f\n", (*scene).square->orientation.z);
-	printf("%f\n", (*scene).square->high);
+	printf("%f\n", (*scene).square->height);
 	printf("%d\n", (*scene).square->colour.r);
 	printf("%d\n", (*scene).square->colour.g);
 	printf("%d\n", (*scene).square->colour.b);
@@ -104,7 +104,7 @@ int				ft_minirt(char *txt, int save)
 	printf("%f\n", (*scene).cylinder->orientation.y);
 	printf("%f\n", (*scene).cylinder->orientation.z);
 	printf("%f\n", (*scene).cylinder->diameter);
-	printf("%f\n", (*scene).cylinder->high);
+	printf("%f\n", (*scene).cylinder->height);
 	printf("%d\n", (*scene).cylinder->colour.r);
 	printf("%d\n", (*scene).cylinder->colour.g);
 	printf("%d\n", (*scene).cylinder->colour.b);
@@ -122,6 +122,6 @@ int				ft_minirt(char *txt, int save)
 	printf("%d\n", (*scene).triangle->colour.r);
 	printf("%d\n", (*scene).triangle->colour.g);
 	printf("%d\n", (*scene).triangle->colour.b);
-	
+	*/
 	return (0);
 }

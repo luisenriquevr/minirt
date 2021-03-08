@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:59:45 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/18 19:05:17 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/03/08 10:33:13 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void            ft_get_square(t_scene **scene, char *line)
 	i += ft_next_value(&line[i]);
 	square->orientation = ft_get_vector(&line[i]);
 	i += ft_next_value(&line[i]);
-	square->high = ft_atof(&line[i]);
+	square->height = ft_atof(&line[i]);
 	i += ft_next_value(&line[i]);
 	square->colour = ft_get_rgb(&line[i]);
 	(*scene)->square = square;

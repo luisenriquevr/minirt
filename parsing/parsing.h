@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 14:00:15 by lvarela           #+#    #+#             */
-/*   Updated: 2021/02/19 08:59:54 by lvarela          ###   ########.fr       */
+/*   Updated: 2021/03/08 10:33:19 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include "../v_operations/v_operations.h"
 # include "../utils/utils.h"
+# include "../printf/libftprintf.h"
+
 
 typedef struct		s_colour
 {
@@ -52,7 +54,7 @@ typedef struct		s_light
 typedef struct		s_sphere
 {
 	t_vector		position;
-	float			diameter;
+	float			radius;
 	t_colour		colour;
 }					t_sphere;
 
@@ -67,7 +69,7 @@ typedef struct		s_square
 {
 	t_vector		position;
 	t_vector		orientation;
-	float			high;
+	float			height;
 	t_colour		colour;
 }					t_square;
 
@@ -76,7 +78,7 @@ typedef struct		s_cylinder
 	t_vector		position;
 	t_vector		orientation;
 	float			diameter;
-	float			high;
+	float			height;
 	t_colour		colour;
 }					t_cylinder;
 
@@ -99,10 +101,11 @@ typedef struct		s_scene
 {
 	t_resolution	*resolution;
 	t_alight		*alight;
-	t_camera		*camera;
-	t_light			*light;
-	t_sphere		*sphere;
-	t_plane			*plane;
+	t_list			*camera;
+	int				n_cameras;
+	t_list			*light;
+	t_list			*sphere;
+	t_list			*plane;
 	t_square		*square;
 	t_cylinder		*cylinder;
 	t_triangle		*triangle;
